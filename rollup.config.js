@@ -29,5 +29,6 @@ export default {
     plugins: [
         resolve(),
         babel({ exclude: "node_modules/**", babelHelpers: "bundled"})
-    ]
+    ],
+    external: ["react"]
 }
