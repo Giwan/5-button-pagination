@@ -1,10 +1,13 @@
 import resolve from '@rollup/plugin-node-resolve';
 import { babel } from '@rollup/plugin-babel';
+import autoprefixer from "autoprefixer";
+import postcss from "rollup-plugin-postcss";
 
 const dist = "dist"; // output folder
 
 export default {
     input: "src/main.js",
+    external: ["react", "react-dom"],
     output: [
         {
             file: `${dist}/bundle.cjs.js`,
@@ -28,7 +31,13 @@ export default {
     ],
     plugins: [
         resolve(),
-        babel({ exclude: "node_modules/**", babelHelpers: "bundled"})
+        babel({ exclude: "node_modules/**", babelHelpers: "bundled"}),
+        postcss({
+            plugins: [autoprefixer()],
+            extract: false,
+            modules: true,
+        }),
     ],
-    external: ["react"]
+    external: ["react", "react-dom"],
+    
 }

@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import TestFunction from '../../dist/bundle.esm';
+import Pagination from '../../dist/bundle.esm';
 
 export default {
   title: 'Test/TestFunction',
-  component: TestFunction,
+  component: Pagination,
 };
 
-const Template = (args) => <TestFunction {...args} />;
+const Template = (args) => <Pagination {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+Primary.args = {};
