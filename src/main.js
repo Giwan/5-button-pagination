@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import style from "./Pagination.module.css";
-import Page from "./Page";
 import Pagination from "./Pagination";
 
-const data = [1, 2, 3, 4];
+const Main = ({
+    totalItemsCount,
+    itemsCountPerPage,
+    startPage,
+    activePage,
+    onChange,
+}) => {
+    const totalPages = totalItemsCount / itemsCountPerPage;
 
-const Main = ({ totalPages, startPage }) => {
-    const [pageNumber, setPage] = useState(startPage);
-    const changePage = (e) => setPage((_currentPage) => _currentPage + 1);
+    const firstPage = () => onChange(startPage);
+    const lastPage = () => onChange(totalPages);
 
-    const firstPage = () => setPage(1);
-    const lastPage = () => setPage(totalPages);
-
-    const prevPage = () => pageNumber > 1 && setPage(pageNumber - 1);
-    const nextPage = () => pageNumber < totalPages && setPage(pageNumber + 1);
+    const prevPage = () => activePage > 1 && onChange(activePage - 1);
+    const nextPage = () => activePage < totalPages && onChange(activePage + 1);
 
     const prevButtons = [
         {
@@ -38,16 +40,11 @@ const Main = ({ totalPages, startPage }) => {
 
     return (
         <div className={style.pageContainerStyle}>
-            <div>
-                Page {pageNumber} of {totalPages}
-            </div>
-            <Page pageNumber={pageNumber} />
-            {/* {data.map((item) => <button className={style.button} key={item} onClick={changePage}>{item}</button>)} */}
             <Pagination
-                pageNumber={pageNumber}
+                pageNumber={activePage}
                 prevButtons={prevButtons}
                 nextButtons={nextButtons}
-                setPage={setPage}
+                setPage={onChange}
                 totalPages={totalPages}
             />
         </div>

@@ -20,7 +20,6 @@
 
 .button {
     background-color: var(--color-primary);
-    background-color: green;
     color: var(--color-primary-light);
     text-transform: capitalize;
     font-size: 18px;
@@ -32,7 +31,7 @@
     box-sizing: border-box;
     align-self: center;
     margin-left: 1px;
-    color: white;
+    border: 1px solid skyblue;
 }
 
 .button:last-child {
@@ -45,25 +44,23 @@
 }
 
 .pageNumberStyle {
-    color: snow;
     font-size: 18px;
     border-radius: calc(var(--unit) / 2);
     background-color: var(--color-primary-light);
     color: var(--color-primary);
-    width: 4ch;
-    display: inline-block;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     place-items: center;
+    background-color: steelblue;
+    color: white;
+    border: 0;
+    width: 4ch;
 }
 
-.pageButtonNumbers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: calc(var(--unit) / 4);
-    /* background-color: pink; */
-    place-items: center;
+.utilButtons {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 600px) {

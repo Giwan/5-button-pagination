@@ -7,10 +7,32 @@ export default {
     component: Pagination,
 };
 
-const Template = (args) => <Pagination {...args} />;
+const Template = (args) => {
+    const [currentPage, changePage] = useState(1);
+
+    const paginate = (pageNumber) => {
+        // Fetch the data that belogs to this new page.
+        // Then change tho that page.
+        changePage(pageNumber);
+    };
+
+    return (
+        <div>
+            <article>Page: {currentPage}</article>
+            <Pagination
+                {...args}
+                onChange={paginate}
+                activePage={currentPage}
+            />
+        </div>
+    );
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
     totalPages: 10,
     startPage: 1,
+    pageRangeDisplayed: 5,
+    itemsCountPerPage: 6,
+    totalItemsCount: 60,
 };
