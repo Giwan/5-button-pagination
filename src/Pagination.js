@@ -22,7 +22,7 @@ const Pagination = ({
             <ul className={style.utilButtons}>
                 <PageButtons {...{ buttons: prevButtons }} />
                 <PageButtons buttons={buttonsCurry([-4, -3, -2, -1])} />
-                <li className={style.li}>
+                <li className={style.li +" "+ style.li_active}>
                     <a href="#" className={style.button +" " +style.pageNumberStyle}>{pageNumber}</a>
                 </li>
                 <PageButtons buttons={buttonsCurry([1, 2, 3, 4])} />

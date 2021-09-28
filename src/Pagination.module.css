@@ -1,6 +1,7 @@
 :root {
     --border-color: silver;
     --color-white: white;
+    --active-color: #0d6efd;
 }
 
 .pageButtonContainer {
@@ -10,7 +11,6 @@
     min-width: 220px;
     justify-content: space-between;
     margin: var(--unit);
-    /* background-color: red; */
 }
 
 .basicPaginationContainer {
@@ -55,7 +55,7 @@
 }
 
 .pageNumberStyle {
-    background-color: steelblue;
+    background-color: var(--active-color, steelblue);
     color: var(--color-white);
 }
 
@@ -68,6 +68,10 @@
     list-style: none;
     border: 1px solid var(--border-color);
     border-right: none;
+}
+
+.li_active {
+    border-color: var(--active-color, steelblue);
 }
 
 .li:last-child {
