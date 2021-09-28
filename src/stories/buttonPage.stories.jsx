@@ -17,8 +17,8 @@ const Template = (args) => {
     };
 
     return (
-        <div>
-            <article>Page: {currentPage}</article>
+        <div style={{textAlign: "center"}}>
+            <article style={{ marginBottom: "15px"}}>Page: {currentPage}</article>
             <Pagination
                 {...args}
                 onChange={paginate}

@@ -19,13 +19,15 @@ const Pagination = ({
 
     return (
         <div className={style.pageButtonNumbers}>
-            <div className={style.utilButtons}>
+            <ul className={style.utilButtons}>
                 <PageButtons {...{ buttons: prevButtons }} />
                 <PageButtons buttons={buttonsCurry([-4, -3, -2, -1])} />
-                <button className={style.pageNumberStyle}>{pageNumber}</button>
+                <li className={style.li}>
+                    <a href="#" className={style.button +" " +style.pageNumberStyle}>{pageNumber}</a>
+                </li>
                 <PageButtons buttons={buttonsCurry([1, 2, 3, 4])} />
                 <PageButtons {...{ buttons: nextButtons }} />
-            </div>
+            </ul>
         </div>
     );
 };
@@ -41,9 +43,9 @@ const PageButtons = ({ buttons }) =>
         const { label, action } = b;
 
         return (
-            <button key={label} onClick={action} className={style.button}>
-                {convertLabel(label)}
-            </button>
+            <li key={label} onClick={action} className={style.li}>
+                <a className={style.button} href="#">{convertLabel(label)}</a>
+            </li>
         );
     });
 
