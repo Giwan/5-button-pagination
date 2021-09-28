@@ -1,7 +1,7 @@
 {
   "name": "5-button-pagination",
   "version": "1.0.0",
-  "description": "",
+  "description": "A react based navigation component",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
@@ -19,7 +19,8 @@
   "license": "ISC",
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=17"
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
