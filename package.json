@@ -1,7 +1,7 @@
 {
-  "name": "5-button-pagination",
+  "name": "@giwan/5-button-pagination-react",
   "version": "1.0.0",
-  "description": "A react based navigation component",
+  "description": "A ReactJS based pagination component",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
@@ -14,9 +14,9 @@
     "build-storybook": "build-storybook",
     "format": "prettier src/ --write"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["pagination", "react", "navigation", "rollup"],
+  "author": "Giwan Persaud",
+  "license": "MIT",
   "dependencies": {},
   "peerDependencies": {
     "react": ">=17",
