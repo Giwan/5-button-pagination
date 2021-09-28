@@ -9,7 +9,7 @@ const Main = ({
     activePage,
     onChange,
 }) => {
-    const totalPages = totalItemsCount / itemsCountPerPage;
+    const totalPages = Math.floor(totalItemsCount / itemsCountPerPage);
 
     const firstPage = () => onChange(startPage);
     const lastPage = () => onChange(totalPages);
