@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import Pagination from "../../dist/bundle.esm";
+import "./buttonPage.module.css";
 
 export default {
     title: "Pagination/Pagination",
