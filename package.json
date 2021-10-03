@@ -1,6 +1,6 @@
 {
   "name": "@giwan/5-button-pagination-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A ReactJS based pagination component",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
