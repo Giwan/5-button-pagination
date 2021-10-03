@@ -42,6 +42,10 @@
     width: 2rem;
 }
 
+.button:hover {
+    background-color: var(--color-secondary, #e9ecef);
+}
+
 
 
 .button:last-child {
@@ -55,6 +59,11 @@
 
 .pageNumberStyle {
     background-color: var(--active-color, steelblue);
+    color: var(--color-white);
+    cursor: default;
+}
+
+.pageNumberStyle:hover {
     color: var(--color-white);
 }
 

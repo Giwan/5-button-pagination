@@ -5,6 +5,7 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
+  "private": false,
   "scripts": {
     "prebuild": "rm -rf dist/*",
     "build": "rollup -c",
