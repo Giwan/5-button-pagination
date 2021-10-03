@@ -65,6 +65,7 @@
 
 .pageNumberStyle:hover {
     color: var(--color-white);
+    background-color: var(--active-color, steelblue);
 }
 
 .utilButtons {
